@@ -14,10 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // DB Config mLab
-// const db = require('./config/keys').mongoURI;
+const db = require('./config/keys').mongoURI;
 
 // DB Config local
-const db = require('./config/keys').mongoLocalURI;
+// const db = require('./config/keys').mongoLocalURI;
 
 mongoose
   .connect(db, { useNewUrlParser: true, useCreateIndex: true })
